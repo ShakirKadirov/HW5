@@ -31,3 +31,31 @@ func averageTemperature(season: Season) -> Int{
 }
 
 print(averageTemperature(season: .autumn))
+
+// Task #2
+
+enum Transport{
+    case car
+    case bicycle
+    case train
+    case plane
+}
+
+func showMaxSpeed(transport: Transport) -> String{
+    switch transport{
+    case .bicycle:
+        let speed = "90 km/h"
+        return speed
+    case .car:
+        let speed = "200 km/h"
+        return speed
+    case .train:
+        let speed = "300 km/h"
+        return speed
+    case .plane:
+        let speed = "1000 km/h"
+        return speed
+    }
+}
+
+print(showMaxSpeed(transport: .car))
