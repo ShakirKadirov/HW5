@@ -91,3 +91,32 @@ func showStatusInfo(status: PaymentStatus) -> String{
 
 
 print(showStatusInfo(status: .cancelled))
+
+// Task #4
+
+
+enum CameraMode {
+    case auto
+    case portrait
+    case landscape
+    case night
+
+    var description: String {
+        switch self {
+        case .auto:
+            return "Автоматический режим: Подходит для общих условий съемки, когда камера сама определяет наилучшие параметры."
+        case .portrait:
+            return "Режим портрета: Используйте для съемки портретов, чтобы создать эффект размытого фона и выделить объект."
+        case .landscape:
+            return "Режим ландшафта: Подходит для съемки природы и пейзажей, чтобы сохранить большую глубину поля."
+        case .night:
+            return "Ночной режим: Используйте в условиях низкой освещенности для более ярких и четких фотографий."
+        }
+    }
+}
+
+func showModeInfo(mode: CameraMode) -> String {
+    return mode.description
+}
+
+print(showModeInfo(mode: .auto))
