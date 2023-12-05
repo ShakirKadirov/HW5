@@ -27,8 +27,6 @@ func averageTemperature(season: Season) -> Int{
         return 30
     case .autumn:
         return 5
-    default:
-        return 0
     }
 }
 
