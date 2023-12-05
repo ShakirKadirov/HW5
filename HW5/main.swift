@@ -59,3 +59,35 @@ func showMaxSpeed(transport: Transport) -> String{
 }
 
 print(showMaxSpeed(transport: .car))
+
+
+// Task #3
+
+enum PaymentStatus{
+    case pending
+    case processing
+    case completed
+    case failed
+    case cancelled
+}
+
+let infoList: String  = "The payment has been initiated but has not been completed. This status is often temporary and may change once the payment is processed"
+
+func showStatusInfo(status: PaymentStatus) -> String{
+    switch status {
+    case .pending:
+        return infoList
+    case .processing:
+        return infoList
+    case .completed:
+        return infoList
+    case .failed:
+        return infoList
+    case .cancelled:
+        return infoList
+
+    }
+}
+
+
+print(showStatusInfo(status: .cancelled))
