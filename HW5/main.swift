@@ -301,3 +301,31 @@ func showProbability(weather: Cloudiness) -> String{
 }
 
 print(showProbability(weather: .pertlyCloudy))
+
+// Task #10
+
+enum DrinkType{
+    case coffee
+    case tea
+    case hotChocolote
+    case water
+    
+    var price: String{
+        switch self {
+        case .coffee:
+            return "1000 tg"
+        case .tea:
+            return "500 tg"
+        case .hotChocolote:
+            return "1200 tg"
+        case .water:
+            return "250 tg"
+        }
+    }
+}
+
+func showPriceDrink(typeOfDrink: DrinkType) -> String{
+    return typeOfDrink.price
+}
+
+print(showPriceDrink(typeOfDrink: .coffee))
