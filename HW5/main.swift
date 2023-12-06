@@ -201,3 +201,74 @@ func showPrice(type:RoomType) -> String{
 }
 
 print(showPrice(type: .doubleRoom))
+
+
+// Task #8
+
+
+enum DifficultyLevel {
+    case easy
+    case medium
+    case hard
+    case expert
+    
+    var timeLimit: Int{
+        switch self {
+        case .easy:
+            return 100
+        case .medium:
+            return 50
+        case .hard:
+            return 25
+        case .expert:
+            return 10
+        }
+    }
+    
+    var numberOfEmenies: Int{
+        switch self {
+        case .easy:
+            return 10
+        case .medium:
+            return 100
+        case .hard:
+            return 1000
+        case .expert:
+            return 1000000
+        }
+    }
+}
+
+
+func showGame(game: DifficultyLevel) -> [Int:Int]{
+    return [game.timeLimit: game.numberOfEmenies]
+}
+
+print(showGame(game: .easy))
+//func showTime(typeLevel: DifficultyLevel) ->Int{
+//    switch typeLevel {
+//    case .easy:
+//        return 20
+//    case .medium:
+//        return 15
+//    case .hard:
+//        return 10
+//    case .expert:
+//        return 5
+//    }
+//}
+//
+//func showNumberOfEnemies(typeLevel: DifficultyLevel) ->Int{
+//    switch typeLevel {
+//    case .easy:
+//        return 10
+//    case .medium:
+//        return 25
+//    case .hard:
+//        return 50
+//    case .expert:
+//        return 100
+//    }
+//}
+
+
