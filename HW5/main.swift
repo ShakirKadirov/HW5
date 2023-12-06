@@ -120,3 +120,32 @@ func showModeInfo(mode: CameraMode) -> String {
 }
 
 print(showModeInfo(mode: .auto))
+
+
+// Task #5
+
+enum AnimalType {
+    case predator
+    case herbivore
+    case insect
+    
+    var description: String{
+        switch self {
+        case .predator:
+            return "Охотится на других животных и питается ими"
+        case .herbivore:
+            return "Tравоядное животное: Питается растениями"
+        case .insect:
+                return "Маленькое беспозвоночное существо с шестью флагами"
+        }
+    }
+}
+
+
+
+func showInfo(info: AnimalType) -> String{
+    return info.description
+}
+
+print(showInfo(info: .herbivore))
+
