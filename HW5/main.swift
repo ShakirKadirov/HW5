@@ -174,4 +174,30 @@ func showNextStatus(status: OrderStatus) -> OrderStatus?{
 }
 
 
-print(showNextStatus(status: .Deliverid))
+//print(showNextStatus(status: .Deliverid))
+
+// task #7
+
+
+enum RoomType{
+    case singleRoom
+    case doubleRoom
+    case luxRoom
+    
+    var price: String{
+        switch self {
+        case .singleRoom:
+            return "25K tg"
+        case .doubleRoom:
+            return "100K tg"
+        case .luxRoom:
+            return "250K tg"
+        }
+    }
+}
+
+func showPrice(type:RoomType) -> String{
+    return type.price
+}
+
+print(showPrice(type: .doubleRoom))
