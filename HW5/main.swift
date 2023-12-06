@@ -149,3 +149,29 @@ func showInfo(info: AnimalType) -> String{
 
 print(showInfo(info: .herbivore))
 
+
+
+// Task #6
+
+enum OrderStatus{
+    case accepted
+    case prepared
+    case readyToSubmit
+    case Deliverid
+}
+
+func showNextStatus(status: OrderStatus) -> OrderStatus?{
+    switch status {
+    case .accepted:
+        return OrderStatus.prepared
+    case .prepared:
+        return OrderStatus.readyToSubmit
+    case .readyToSubmit:
+        return OrderStatus.Deliverid
+    case .Deliverid:
+        return nil
+    }
+}
+
+
+print(showNextStatus(status: .Deliverid))
