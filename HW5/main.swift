@@ -272,3 +272,32 @@ print(showGame(game: .easy))
 //}
 
 
+
+
+// Task #9
+
+enum Cloudiness{
+    case clear
+    case pertlyCloudy
+    case cloudy
+    case overcast
+    
+    var probabilityOfPrecipitation: String{
+        switch self {
+        case .clear:
+            return " ! ~0 %"
+        case .pertlyCloudy:
+            return " ! ~5 %"
+        case .cloudy:
+            return " ! ~30 %"
+        case .overcast:
+            return " ! ~50 %"
+        }
+    }
+}
+
+func showProbability(weather: Cloudiness) -> String{
+    return weather.probabilityOfPrecipitation
+}
+
+print(showProbability(weather: .pertlyCloudy))
